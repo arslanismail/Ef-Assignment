@@ -10,7 +10,7 @@ const get = async (req, res, next) => {
 };
 
 const set = (key, value) => {
-  redisClient.setAsync(key, JSON.stringify(value), "ex", 240);
+  redisClient.setAsync(key, JSON.stringify(value), "ex", 242);
 };
 
 const del = (key) =>{
