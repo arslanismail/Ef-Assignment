@@ -1,0 +1,19 @@
+# Approach 1 Ignore specific Folders/Files
+
+MY_SECRET_PASSWORDS.txt
+
+.git
+.idea
+.vscode
+
+docker/
+docker-compose*.yaml
+**/*.md
+
+node_modules/
+npm-debug.log
+
+.dockerignore
+
+yarn.lock
+

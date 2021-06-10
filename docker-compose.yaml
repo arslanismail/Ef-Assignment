@@ -1,0 +1,36 @@
+version: "3.7"
+services:
+  webserver:
+    container_name: webserver_container
+    image: webserver:1.00
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: .
+    command: npm run start
+    networks:
+      - server
+    environment:
+      - PORT=5000
+      - NODE_ENV=production
+      - REDIS_URL=redis://cache_container
+    ports:
+      - "5000:5000"
+  mongo:
+    container_name: mongodb_container
+    image: mongo
+    networks:
+      - server
+    ports:
+      - "27017:27017"
+
+  redis:
+    image: redis
+    container_name: cache_container
+    ports:
+      - "6379:6379"
+    networks:
+      - server    
+networks:
+  server:
+    name: server
