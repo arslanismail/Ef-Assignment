@@ -44,7 +44,11 @@ The root of the project folder contains a docker-compose.yaml file which will he
 ## Usage ( Postman Collection )
 
 
-#### Note: You can get the postman collection from the root of the folder. You just need to import this file "Ef-Collection.postman_collection" in your postman to test the Apis
+#### Note :
+* You can get the postman collection from the root of the folder. You just need to import this file "Ef-Collection.postman_collection" in your postman to test the Apis.
+
+ 
+* There are Apis that require params like postId or userId postman collection have these variables named already you just need to add the values to these params from postman's params tab. these values you can get from other Apis like create user API will return you userId and create post will return you post id later these ids could be used in other Apis to update or show specific. 
 
 
 ## Caching
