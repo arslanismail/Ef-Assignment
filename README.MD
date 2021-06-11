@@ -47,7 +47,7 @@ The root of the project folder contains a docker-compose.yaml file which will he
 #### Note: You can get the postman collection from the root of the folder. You just need to import this file "Ef-Collection.postman_collection" in your postman to test the Apis
 
 
-## caching
+## Caching
 
 To make the app more performant we are using "Redis" and we apply API caching for all the get requests of our web services it enhance the performance greatly.
 some key points for our caching solution are 
